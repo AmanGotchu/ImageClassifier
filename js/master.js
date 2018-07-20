@@ -2,10 +2,18 @@
 
 function clickMe(){
   console.log("Clicked");
-  $.post('https://cnnflaskapi.herokuapp.com/classify',   // url
-       { imageURL: 'https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg' }, // data to be submit
-       function(data, status, jqXHR) {// success callback
-                console.log(status);
-                console.log(data);
-        })
+  $.ajax({
+      url: 'https://cnnflaskapi.herokuapp.com/classify',
+      type: 'post',
+      data: {
+          imageURL: 'https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg'
+      },
+      headers: {
+          content-type: 'application/json' //for object property name, use quoted notation shown in second
+      },
+      dataType: 'json',
+      success: function (data) {
+          console.info(data);
+      }
+  });
 }
