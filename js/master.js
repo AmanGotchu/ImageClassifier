@@ -3,7 +3,8 @@
 function clickMe(){
   console.log("Clicked");
 
-  $('#output').text("Processing");
+  $('h1').text("Processing");
+  $('#loading').css({'opacity': 1});
 
   $.ajax({
     url:'https://cnnflaskapi.herokuapp.com/classify',
@@ -11,7 +12,9 @@ function clickMe(){
     data: JSON.stringify({"imageURL": $('#urlinput').val()}),
     contentType:"application/json",
     success: function(response){
-      $('#output').text(response);
+      $('h1').text("Classification: " + response);
+      $('#urlinput').val("");
+      $('#loading').css({'opacity': 0});
     }
   })
 

@@ -1,8 +1,97 @@
-input{
-  width: 500px;
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900|Muli|Titillium+Web');
+
+#output{
+  font-family: 'Muli', sans-serif;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  background-color: #F6728d;
 }
 
-button{
-  background-color: orange;
+#form{
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  background-color: #F6728d;
+}
 
+#outputstring{
+  font-size: 300%;
+}
+
+#classify{
+  margin-left: 30px;
+  outline: none;
+}
+
+#loadContainer{
+  display: flex;
+  justify-content: center;
+  background-color: #F6728d;
+}
+
+input{
+  width: 500px;
+  height: 50px;
+  padding: 15px;
+
+}
+
+#loading{
+  width: 120px;
+  height: 120px;
+  border: 16px solid #bdc3c7;
+  border-radius: 68px;
+  border-top-color: #1abc9c;
+  border-bottom-color: #3498db;
+  animation: coloredspin 4s linear infinite;
+  transition: opacity 1s ease-in;
+  opacity: 0;
+  background-color: #F6728d;
+}
+
+html{
+  background-color: #F6728d;
+}
+
+.test{
+
+  width: 100%;
+  height: 100px;
+  background-color: #F6728d;
+
+}
+
+body{
+  font-family: Raleway;
+  display: flex;
+  flex-direction: column;
+  background-color: ;
+}
+
+
+@keyframes coloredspin{
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    border-top-color: #2ecc71;
+    border-bottom-color: #2ecc71;
+  }
+  50%{
+    border-top-color: #3498db;
+    border-bottom-color: #3498db;
+    transform: rotate(360deg);
+  }
+  75%{
+    border-top-color: #9b59b6;
+    border-bottom-color: #9b59b6;
+  }
+  100%{
+    transform: rotate(720deg);
+  }
 }
